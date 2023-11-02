@@ -17,6 +17,6 @@ app.listen(7700,async()=>{
         console.log("connected to dbs");
         console.log("Port is rnning at 7700")
     } catch (error) {
-        console.log("Internal server Error")
+        console.log("Internal server Errors")
     }
 })
