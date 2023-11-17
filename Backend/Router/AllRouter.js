@@ -15,15 +15,15 @@ boardRouter.post("/",async(req,res)=>{
 });
 
 
-// boardRouter.get("/", async(req,res)=>{
-//     try {
-//         const userId = req.id;
-//         const board = await BoardModel.find({board:userId});
-//         res.status(200).json({"msg":"board",board})
-//     } catch (error) {
-//         res.status(500).json({"msg":"Internal server Error"})
-//     }
-// })
+boardRouter.get("/", async(req,res)=>{
+    try {
+        const userId = req.id;
+        const board = await BoardModel.find({board:userId});
+        res.status(200).json({"msg":"board",board})
+    } catch (error) {
+        res.status(500).json({"msg":"Internal server Error"})
+    }
+})
 
 boardRouter.post("/:id/row/:rowid/task",async(req,res)=>{
     try {
