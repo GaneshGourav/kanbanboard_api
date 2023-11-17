@@ -3,16 +3,16 @@ const boardRouter = express.Router();
 const {BoardModel} = require('../model/boardmodel');
 
 
-boardRouter.post("/",async(req,res)=>{
-    try {
-        const {name,board}= req.body;
-        const newBoard = new BoardModel({name,board});
-        await newBoard.save();
-        res.status(200).json({"msg":"Added board",newBoard})
-    } catch (error) {
-        res.status(500).json({"msg":"internal serevr Error"})
-    }
-});
+// boardRouter.post("/",async(req,res)=>{
+//     try {
+//         const {name,board}= req.body;
+//         const newBoard = new BoardModel({name,board});
+//         await newBoard.save();
+//         res.status(200).json({"msg":"Added board",newBoard})
+//     } catch (error) {
+//         res.status(500).json({"msg":"internal serevr Error"})
+//     }
+// });
 
 
 boardRouter.get("/", async(req,res)=>{
